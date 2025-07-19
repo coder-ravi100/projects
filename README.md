@@ -68,7 +68,7 @@
 
 ## 👨‍💻 Author
 
-> **Rathod Ravi Kumar Dilip Bhai**  
+> **Ravi Aarya**  
 🎓 MCA | 📫 ravirathod100100@gmail.com | 📱 9316168976  
 💡 Passionate about logic building, backend dev & database design.
 
