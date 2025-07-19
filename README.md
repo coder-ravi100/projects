@@ -1,37 +1,78 @@
-![C Logo](https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg)
+<!-- CENTERED LOGOS -->
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg" width="80" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" width="80" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="80" />
+</p>
 
-# 📘 C Language Project
+<h1 align="center">📚 C, C++ and SQL Mini Projects</h1>
+<p align="center">This repository contains mini projects built with <strong>C Programming</strong>, <strong>C++ OOP Concepts</strong>, and <strong>SQL Database Queries</strong>.</p>
 
-## 🔁 Mini Projects Using Loop
+---
+
+## 🔵 C Language Project
+
+### 🔁 Mini Projects Using Loop
 
 1. 🔢 **Mini Calculator Using Loop**
-2. 🏧 **ATM System With Retry Limit**
-3. 🔐 **Login System With Password Attempts**
+2. 🏧 **ATM System with Retry Limit**
+3. 🔐 **Login System with Password Attempts**
 
-![C++ Logo](https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg)
+> ✍️ Focused on conditional statements, loops, and beginner logic-building using the C language.
 
-# 💻 C++ Language Project
+---
 
-## 🧠 Mini Projects Using OOPs & Logic
+## 🟣 C++ Language Project
 
-1. 🔢 **Calculator Using Class and Objects**
-2. 🔒 **Login System Using OOPs**
-3. 🧾 **Bank Management System Using Class**
-4. 🎮 **Number Guessing Game**
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" width="100"/>
+
+### 🧠 Mini Projects Using OOPs & Logic
+
+1. 🧮 **Calculator Using Class and Objects**
+2. 🔑 **Login System Using OOPs**
+3. 🏦 **Bank Management System Using Class**
+4. 🎲 **Number Guessing Game**
 5. 📊 **Student Marks Report Using Constructor**
 
-> ✔️ Implemented using C++ OOP Concepts like Class, Object, Constructor, Inheritance, and File Handling.
+> ✅ Implemented using C++ concepts like **Class**, **Object**, **Constructor**, **Inheritance**, and **File Handling**.
 
-![SQL Logo](https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png)
+---
 
-# 🗃️ SQL Projects & Practice
+## 🟠 SQL Projects & Practice
 
-## 📋 SQL Practice Sets
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="120"/>
 
-1. 📌 **Employee Management System (Select, Where, Order By)**
-2. 📊 **Sales & Customer Report (Group By, Having, Join)**
-3. 📂 **Library Database (DDL & DML Operations)**
-4. 🔐 **Login Table with Attempt History (Insert + Constraints)**
-5. 📅 **Attendance Tracker (Date Functions + Case + Views)**
+### 📋 SQL Query Practice Sets
 
-> 🧠 Includes queries on: SELECT, JOIN, GROUP BY, ORDER BY, HAVING, LIKE, IN, BETWEEN, AGGREGATE Functions, and Subqueries.
+1. 👔 **Employee Management System** (SELECT, WHERE, ORDER BY)
+2. 🛒 **Sales & Customer Report** (JOIN, GROUP BY, HAVING)
+3. 📚 **Library Database** (DDL + DML)
+4. 🔐 **Login Tracker with History** (Constraints + INSERT)
+5. 🕓 **Attendance System** (DATE Functions + CASE)
+
+> ⚡ Practiced with **real-world queries** using `SELECT`, `WHERE`, `JOIN`, `GROUP BY`, `HAVING`, `LIKE`, `IN`, `BETWEEN`, and **aggregate functions**.
+
+---
+
+## 📦 Technologies Used
+
+| Language | Concepts Covered |
+|----------|------------------|
+| **C**    | Loops, Conditions, Logic Programs |
+| **C++**  | OOPs – Class, Object, File Handling |
+| **SQL**  | Database Queries, Table Design, Data Retrieval |
+
+---
+
+## 👨‍💻 Author
+
+> **Rathod Ravi Kumar Dilip Bhai**  
+🎓 MCA | 📫 ravirathod100100@gmail.com | 📱 9316168976  
+💡 Passionate about logic building, backend dev & database design.
+
+---
+
+> ⭐ Don’t forget to give a star if you like this repository!
+
