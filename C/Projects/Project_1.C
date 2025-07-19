@@ -7,7 +7,7 @@ int main()
     int choice;
     do
     {
-    printf("\n =========================");
+    printf("\n =======");
     printf("\n----Mini Calculator----");
     printf("\n 1.Addition");
     printf("\n 2.Subtraction");
@@ -16,7 +16,7 @@ int main()
     printf("\n 5.Exit");
     printf("\n Enter Your Choice :");
     scanf("%d",&choice);
-    printf("\n =========================");
+    printf("\n ========");
     
     switch (choice)
     {
