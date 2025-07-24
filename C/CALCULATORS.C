@@ -2,9 +2,13 @@
 #include<stdio.h>
 int main()
 {
-   
-    float num1 = 20 ,num2 = 30, ans;
-    int choice;
+   float num1 ,num2, ans;
+   int choice;
+   printf("/n Enter The Number 1:"):
+   scanf("%d",&num1);
+   printf("/n Enter The Number 2:"):
+   scanf("%d",&num2);
+    
     do
     {
     printf("\n =======");
