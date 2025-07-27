@@ -19,6 +19,8 @@
 1. 🔢 **Mini Calculator Using Loop**
 2. 🏧 **ATM System with Retry Limit**
 3. 🔐 **Login System with Password Attempts**
+4. 🎡 **Tic Tac Game**
+5. 👨‍💻**Student Registration**
 
 > ✍️ Focused on conditional statements, loops, and beginner logic-building using the C language.
 
