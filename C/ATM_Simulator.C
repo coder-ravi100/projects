@@ -6,6 +6,9 @@ int main()
     int MaxAttempt = 3 , Attempt = 0;
     int choice;
     int currect_balance = 50000;
+    int withdraw;
+    int deppsit;
+    up:
     while (Attempt < MaxAttempt)
     {
         printf("\n ENTER YOUR ATM PIN :");
@@ -29,10 +32,34 @@ int main()
                         printf("\n CURRECT AMOUNT BALANCE %d ",currect_balance);
                 break;
                 case 2:
+                      
+                       printf("\n Enter Your Amount : ");
+                       scanf("%d", &withdraw);
 
+                       if (withdraw < currect_balance)
+                        {
+                        printf("\n Transaction Successful!");
+                        printf("\n Available Balance is : %d", currect_balance - withdraw);
+                        }
+                      else
+                       {
+                          printf("\n Not Enough Balance. Your Balance is : %d", currect_balance);
+                       }
+                       
                 break;
                 case 3:
+                       printf("\n Deposit Your Amount : ");
+                       scanf("%d", &deppsit);
 
+                       if (withdraw > 100)
+                        {
+                        printf("\n Deposite is Successful!");
+                        printf("\n Available Balance is : %d", currect_balance + deppsit);
+                        }
+                      else
+                       {
+                          printf("\n Invalid Your Amount :");
+                       }
                 break;
                 case 4:
 
@@ -41,7 +68,7 @@ int main()
 
                 break;
                 case 6:
-
+                        
                 break;
             }
             break;
@@ -56,7 +83,6 @@ int main()
     {
         printf("\n YOUR ACCOUNT IS BLOCKED DUE TO 3 WRONG ATTEMPTS");
     }
-    
-    
+        goto up;
     return 0;
 }
