@@ -1,88 +1,116 @@
 /*ATM SIMULATOR*/
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-    int NEWPIN;
-    int MaxAttempt = 3 , Attempt = 0;
-    int choice;
+    int NEWPIN = 123;
+    int MaxAttempt = 3, Attempt = 0;
     int currect_balance = 50000;
-    int withdraw;
-    int deppsit;
-    up:
+    int choice, withdraw, deppsit;
+
+    // ---------- PIN CHECK ----------
     while (Attempt < MaxAttempt)
     {
-        printf("\n ENTER YOUR ATM PIN :");
-        scanf("%d",&NEWPIN);
-        if (NEWPIN == 123)
+        int enteredPIN;
+        printf("\nENTER YOUR ATM PIN: ");
+        scanf("%d", &enteredPIN);
+
+        if (enteredPIN == NEWPIN)
         {
-            printf("\n ACCESS GRANTED WELCOME \n");
-            printf("\n WELCOME TO SBI BANK ATM");
-            printf("\n =======ATM MENU========");
-            printf("\n 1.CHECK BALANCE");
-            printf("\n 2.CASH WITHDRAW");
-            printf("\n 3.DEPOSIT MONEY");
-            printf("\n 4.CHANGE PIN");
-            printf("\n 5.MINI STATEMENT");
-            printf("\n 6.EXIT");
-            printf("\n PLEASE CHOOSE OPTION :");
-            scanf("%d",&choice);
-            switch (choice)
+            printf("\nACCESS GRANTED. WELCOME TO SBI BANK ATM\n");
+
+            // ---------- ATM MENU ----------
+            while (1)
             {
-                case 1:
-                        printf("\n CURRECT AMOUNT BALANCE %d ",currect_balance);
-                break;
-                case 2:
-                      
-                       printf("\n Enter Your Amount : ");
-                       scanf("%d", &withdraw);
+                printf("\n======= ATM MENU =======");
+                printf("\n1. CHECK BALANCE");
+                printf("\n2. CASH WITHDRAW");
+                printf("\n3. DEPOSIT MONEY");
+                printf("\n4. CHANGE PIN");
+                printf("\n5. MINI STATEMENT");
+                printf("\n6. EXIT");
+                printf("\nCHOOSE OPTION: ");
+                scanf("%d", &choice);
 
-                       if (withdraw < currect_balance)
+                switch (choice)
+                {
+                    case 1:
+                        printf("\nCURRENT BALANCE: %d", currect_balance);
+                        break;
+
+                    case 2:
+                        printf("\nENTER AMOUNT TO WITHDRAW: ");
+                        scanf("%d", &withdraw);
+
+                        if (withdraw > 0 && withdraw <= currect_balance)
                         {
-                        printf("\n Transaction Successful!");
-                        printf("\n Available Balance is : %d", currect_balance - withdraw);
+                            currect_balance  = currect_balance + withdraw;
+                            printf("\nWITHDRAW SUCCESSFUL. NEW BALANCE: %d", currect_balance);
                         }
-                      else
-                       {
-                          printf("\n Not Enough Balance. Your Balance is : %d", currect_balance);
-                       }
-                       
-                break;
-                case 3:
-                       printf("\n Deposit Your Amount : ");
-                       scanf("%d", &deppsit);
-
-                       if (withdraw > 100)
+                        else
                         {
-                        printf("\n Deposite is Successful!");
-                        printf("\n Available Balance is : %d", currect_balance + deppsit);
+                            printf("\nINSUFFICIENT BALANCE OR INVALID AMOUNT.");
                         }
-                      else
-                       {
-                          printf("\n Invalid Your Amount :");
-                       }
-                break;
-                case 4:
+                        break;
 
-                break;
-                case 5:
+                    case 3:
+                        printf("\nENTER AMOUNT TO DEPOSIT: ");
+                        scanf("%d", &deppsit);
 
-                break;
-                case 6:
-                        
-                break;
+                        if (deppsit >= 100)
+                        {
+                            currect_balance = currect_balance + deppsit;
+                            printf("\nDEPOSIT SUCCESSFUL. NEW BALANCE: %d", currect_balance);
+                        }
+                        else
+                        {
+                            printf("\nINVALID DEPOSIT. AMOUNT MUST BE AT LEAST ₹100.");
+                        }
+                        break;
+
+                    case 4:
+                        {
+                            int UPDATEPIN;
+                            printf("\nENTER NEW PIN: ");
+                            scanf("%d", &UPDATEPIN);
+
+                            if (UPDATEPIN == NEWPIN)
+                            {
+                                printf("\nNEW PIN CANNOT BE SAME AS OLD PIN.");
+                            }
+                            else if (UPDATEPIN < 1000 || UPDATEPIN > 9999)
+                            {
+                                printf("\nPIN MUST BE A 4-DIGIT NUMBER.");
+                            }
+                            else
+                            {
+                                NEWPIN = UPDATEPIN;
+                                printf("\nPIN UPDATED SUCCESSFULLY.");
+                            }
+                        }
+                        break;
+
+                    case 5:
+                        printf("\n(MINI STATEMENT FEATURE COMING SOON)");
+                        break;
+
+                    case 6:
+                        printf("\nTHANK YOU FOR USING SBI ATM. GOODBYE!\n");
+                        return 0;
+
+                    default:
+                        printf("\nINVALID CHOICE. PLEASE TRY AGAIN.");
+                }
             }
-            break;
         }
         else
         {
             Attempt++;
-            printf("\n INCORRECT PIN ATTEMPTS LEFT :(%d)",MaxAttempt - Attempt);
+            printf("\nINCORRECT PIN. ATTEMPTS LEFT: %d", MaxAttempt - Attempt);
         }
     }
-    if (Attempt == MaxAttempt)
-    {
-        printf("\n YOUR ACCOUNT IS BLOCKED DUE TO 3 WRONG ATTEMPTS");
-    }
-        goto up;
+
+    printf("\nYOUR ACCOUNT IS BLOCKED DUE TO 3 WRONG ATTEMPTS.\n");
+
     return 0;
 }
