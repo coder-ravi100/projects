@@ -8,7 +8,7 @@ int main()
     int currect_balance = 50000;
     int choice, withdraw, deppsit;
 
-    // ---------- PIN CHECK ----------
+    
     while (Attempt < MaxAttempt)
     {
         int enteredPIN;
@@ -19,7 +19,7 @@ int main()
         {
             printf("\nACCESS GRANTED. WELCOME TO SBI BANK ATM\n");
 
-            // ---------- ATM MENU ----------
+            
             while (1)
             {
                 printf("\n======= ATM MENU =======");
@@ -34,17 +34,19 @@ int main()
 
                 switch (choice)
                 {
+                    //Check Amount
                     case 1:
                         printf("\nCURRENT BALANCE: %d", currect_balance);
                         break;
 
+                    //Withdraw Amount
                     case 2:
                         printf("\nENTER AMOUNT TO WITHDRAW: ");
                         scanf("%d", &withdraw);
 
                         if (withdraw > 0 && withdraw <= currect_balance)
                         {
-                            currect_balance  = currect_balance + withdraw;
+                            currect_balance  = currect_balance - withdraw;
                             printf("\nWITHDRAW SUCCESSFUL. NEW BALANCE: %d", currect_balance);
                         }
                         else
@@ -52,7 +54,7 @@ int main()
                             printf("\nINSUFFICIENT BALANCE OR INVALID AMOUNT.");
                         }
                         break;
-
+                    //Deposit Amount
                     case 3:
                         printf("\nENTER AMOUNT TO DEPOSIT: ");
                         scanf("%d", &deppsit);
@@ -67,7 +69,7 @@ int main()
                             printf("\nINVALID DEPOSIT. AMOUNT MUST BE AT LEAST ₹100.");
                         }
                         break;
-
+                    //Update Pin
                     case 4:
                         {
                             int UPDATEPIN;
@@ -89,11 +91,14 @@ int main()
                             }
                         }
                         break;
-
+                    
+                    //Statement Check
                     case 5:
                         printf("\n(MINI STATEMENT FEATURE COMING SOON)");
                         break;
-
+                    
+                    
+                    //Exit 
                     case 6:
                         printf("\nTHANK YOU FOR USING SBI ATM. GOODBYE!\n");
                         return 0;
@@ -102,7 +107,7 @@ int main()
                         printf("\nINVALID CHOICE. PLEASE TRY AGAIN.");
                 }
             }
-        }
+       }
         else
         {
             Attempt++;
